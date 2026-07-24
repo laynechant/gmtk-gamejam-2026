@@ -4,24 +4,36 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public ChoosenItems choosenItems;
 
-    [Serializable]
+
+    [SerializeField] public Item foodItem;
+    [SerializeField] public Item drinkItem;
+    [SerializeField] public Item gameItem;
+
+
+   // public ChoosenItems choosenItems;
+
+/*    [Serializable]
     public struct ChoosenItems
     {
         public Food.FoodTypes foodType;
         public Drinks.DrinkTypes drinks;
         public Music.MusicTypes music;
         public Games.GameTypes games;
-    }
-    /*public enum ChoosenItems
-    {
-      pizza, 
-      beer,
-      rap,
-      pong
     }*/
 
+
+    public void GetChoosenItem(Component sender, object data)
+    {
+        if (data is Item item)
+        {
+          
+           
+
+            foodItem = item;
+
+        }
+    }
 
     /*
       potential functions for this class

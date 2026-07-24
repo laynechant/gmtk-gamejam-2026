@@ -10,72 +10,93 @@ public class PartyEnjoyment : MonoBehaviour
     // here we have everybodies party pref
     public List<PartyGoer> partyGoers;
 
+    // the list to hold all the party items i made
+    [SerializeField] private List<Item> foodItems;
+    [SerializeField] private List<Item> drinkItems;
+    [SerializeField] private List<Item> gameItems;
+
     // now we get the players pref
     [SerializeField] private Player player;
 
     private int preferenceMatches = 0;
 
+ 
+
     // Update is called once per frame
     void Update()
     {
-        CollectPartyPreferences();
-    }
+        int count = CountMatchingFields(player);
 
-    private int CountMatchingFields(PartyGoer partyGoerItem, Player player)
+       
+    }
+    // this has to 
+    private int CountMatchingFields(Player player)
     {
         int matchingCount = 0;
-        if (partyGoerItem.preferences.foods == player.choosenItems.foodType)
+        foreach (var item in foodItems)
         {
-            matchingCount++;
-        }
-        else
-        {
-            matchingCount--;
-        }
-        if (partyGoerItem.preferences.drinks == player.choosenItems.drinks)
-        {
-            matchingCount++;
-        }
-        else
-        {
-            matchingCount--;
-        }
-        if (partyGoerItem.preferences.music == player.choosenItems.music) 
-        {
-            matchingCount++;
-        }
-        else
-        {
-            matchingCount--;
-        }
-        if (partyGoerItem.preferences.games == player.choosenItems.games) 
-        {
-           matchingCount++;
-        }
-        else
-        {
-            matchingCount--;
+            if (item.Name == player.foodItem.Name)
+                matchingCount++;
+
         }
 
-        if (matchingCount == 4)
+        foreach (var item in drinkItems)
         {
-            print("Everything matched you get extra points!!");
-            matchingCount++;
+
+            if (item.Name == player.drinkItem.Name)
+                matchingCount++;
+  
         }
+
+
+        foreach (var item in gameItems)
+        {
+            if (item.Name == player.gameItem.Name)
+                matchingCount++;
+
+        }
+
+/*
+        if (matchingCount == 3)
+        {
+            //print("Everything matched you get extra points!!");
+            matchingCount++;
+        }*/
 
         return matchingCount;
     }
       
     
-    private void CollectPartyPreferences()
+   /* private void CollectPartyPreferences()
     {
 
-        foreach (var person in partyGoers)
+        foreach (var item in foodItems)
         {
-            preferenceMatches = CountMatchingFields(person, player);
+
+
+            preferenceMatches = CountMatchingFields(item, player);
             
         }
-    }
+
+        foreach (var item in drinkItems)
+        {
+
+
+            preferenceMatches = CountMatchingFields(item, player);
+            
+        }
+
+
+        foreach (var item in gameItems)
+        {
+
+
+            preferenceMatches = CountMatchingFields(item, player);
+            
+        }
+
+
+    }*/
 
     public int CalculatePartyEnjoyment()
     {
