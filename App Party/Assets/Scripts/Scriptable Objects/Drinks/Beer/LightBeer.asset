@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720f3640efd8e8b4998e31852cac18d1, type: 3}
   m_Name: LightBeer
   m_EditorClassIdentifier: 
-  Category: 'Drinks '
-  SubCategory: Beer
+  category: 1
+  subCategory: 6
   Name: Light Beer
   Price: 5

@@ -10,9 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 720f3640efd8e8b4998e31852cac18d1, type: 3}
-  m_Name: IceCream
+  m_Name: NewPartyItem
   m_EditorClassIdentifier: 
-  category: 0
-  subCategory: 3
-  Name: Icecream
-  Price: 5
+  Name: 
+  Price: 0

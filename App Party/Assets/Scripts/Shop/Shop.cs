@@ -4,11 +4,12 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     [SerializeField] private Event PizzaBought;  
+    [SerializeField] private Item partyItem;  
 
 
-    public void ButtonClicked(string data)
+    public void ButtonClicked()
     {
-        PizzaBought.Raise(this, data);
+        PizzaBought.Raise(this, partyItem);
         print("Rasing this event now!!");
     }
 }

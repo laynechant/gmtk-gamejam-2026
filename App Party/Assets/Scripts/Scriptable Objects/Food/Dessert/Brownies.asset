@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720f3640efd8e8b4998e31852cac18d1, type: 3}
   m_Name: Brownies
   m_EditorClassIdentifier: 
-  Category: Food
-  SubCategory: Dessert
+  category: 0
+  subCategory: 3
   Name: Brownies
   Price: 5
