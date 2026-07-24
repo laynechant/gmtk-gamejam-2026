@@ -14,6 +14,13 @@ public class Player : MonoBehaviour
         public Music.MusicTypes music;
         public Games.GameTypes games;
     }
+
+
+    public void SetChoosenItem(string PreferenceType, string item)
+    {
+
+    }
+
     /*public enum ChoosenItems
     {
       pizza, 
