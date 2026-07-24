@@ -24,10 +24,44 @@ public class PartyEnjoyment : MonoBehaviour
     private int CountMatchingFields(PartyGoer partyGoerItem, Player player)
     {
         int matchingCount = 0;
-        if (partyGoerItem.preferences.foods == player.choosenItems.foodType) matchingCount++;
-        if (partyGoerItem.preferences.drinks == player.choosenItems.drinks) matchingCount++;
-        if (partyGoerItem.preferences.music == player.choosenItems.music) matchingCount++;
-        if (partyGoerItem.preferences.games == player.choosenItems.games) matchingCount++;
+        if (partyGoerItem.preferences.foods == player.choosenItems.foodType)
+        {
+            matchingCount++;
+        }
+        else
+        {
+            matchingCount--;
+        }
+        if (partyGoerItem.preferences.drinks == player.choosenItems.drinks)
+        {
+            matchingCount++;
+        }
+        else
+        {
+            matchingCount--;
+        }
+        if (partyGoerItem.preferences.music == player.choosenItems.music) 
+        {
+            matchingCount++;
+        }
+        else
+        {
+            matchingCount--;
+        }
+        if (partyGoerItem.preferences.games == player.choosenItems.games) 
+        {
+           matchingCount++;
+        }
+        else
+        {
+            matchingCount--;
+        }
+
+        if (matchingCount == 4)
+        {
+            print("Everything matched you get extra points!!");
+            matchingCount++;
+        }
 
         return matchingCount;
     }
@@ -39,7 +73,7 @@ public class PartyEnjoyment : MonoBehaviour
         foreach (var person in partyGoers)
         {
             preferenceMatches = CountMatchingFields(person, player);
-            Debug.Log("Matching Count: " + preferenceMatches + "between: " + person);
+            
         }
     }
 
