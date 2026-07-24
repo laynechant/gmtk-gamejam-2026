@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewPartyGoer", menuName = "ScritableObjects/PartGoer")]
+[CreateAssetMenu(fileName = "NewPartyGoer", menuName = "ScritableObjects/PartyGoer")]
 public class PartyGoer : ScriptableObject
 {
 

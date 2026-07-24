@@ -16,11 +16,59 @@ public class Player : MonoBehaviour
     }
 
 
-    public void SetChoosenItem(string PreferenceType, string item)
+    public void GetChoosenItem(Component sender, object data)
+    {
+        if (data is string item)
+        {
+           
+            // need to figure out what the player bought so we can decide what to 
+            // set it to
+            // maybe we cxould try parsing it to each different enum and then the ones that return true we 
+            // know wh have a good match??
+
+            if (Enum.TryParse<Food.FoodTypes>(item, out Food.FoodTypes result))
+            {
+
+                switch(result)
+                {
+                    case Food.FoodTypes.Pizza:
+                        choosenItems.foodType = Food.FoodTypes.Pizza;
+                        break;
+
+                    case Food.FoodTypes.Chips:
+                        choosenItems.foodType = Food.FoodTypes.Chips;
+                        break;
+
+                    case Food.FoodTypes.Wings:
+                        choosenItems.foodType = Food.FoodTypes.Wings;
+                        break;
+
+
+                    case Food.FoodTypes.Sliders:
+                        choosenItems.foodType = Food.FoodTypes.Sliders;
+                        break;
+
+                    case Food.FoodTypes.Nachos:
+                        choosenItems.foodType = Food.FoodTypes.Nachos;
+                        break;
+
+                    default: 
+
+                        break;
+                }
+               
+            }
+
+            
+      
+        }
+    }
+
+
+    public void SetChoosenItem(ChoosenItems item)
     {
 
     }
-
     /*public enum ChoosenItems
     {
       pizza, 

@@ -59,7 +59,7 @@ public class PartyEnjoyment : MonoBehaviour
 
         if (matchingCount == 4)
         {
-            print("Everything matched you get extra points!!");
+            //print("Everything matched you get extra points!!");
             matchingCount++;
         }
 
