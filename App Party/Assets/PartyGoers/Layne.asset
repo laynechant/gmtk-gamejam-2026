@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98c28c11d246e145aa6850d18631867, type: 3}
   m_Name: Layne
   m_EditorClassIdentifier: 
-  preferences:
-    foods: 0
-    drinks: 1
-    music: 1
-    games: 0
+  Food: {fileID: 11400000, guid: fe14312fa6e25bc4f94091a4c01e45cd, type: 2}
+  Drinks: {fileID: 11400000, guid: a85fde0225b5b064ea86329aa0c15ea9, type: 2}
+  Games: {fileID: 11400000, guid: c3b342f5d88147d4ba2aaed1e92ffd89, type: 2}
