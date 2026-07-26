@@ -29,41 +29,27 @@ public class PartyEnjoyment : MonoBehaviour
 
        
     }
-    // this has to 
-    private int CountMatchingFields(Player player)
+
+    public int CountMatchingFields()
     {
-        int matchingCount = 0;
-        foreach (var item in foodItems)
-        {
-            if (item.Name == player.foodItem.Name)
-                matchingCount++;
+        int totalMatches = 0;
+        int bounsPoints = 0;
+        int jonMatches = 0;
 
+
+        foreach (var person in partyGoers)
+        {
+            int matchesForPerson = 0;
+
+            if (person != null && person.Food.Name == player.foodItem.Name) matchesForPerson++;
+            if (person != null && person.Drinks.Name == player.drinkItem.Name) matchesForPerson++;
+            if (person != null && person.Games.Name == player.gameItem.Name) matchesForPerson++;
+            totalMatches += matchesForPerson;
         }
 
-        foreach (var item in drinkItems)
-        {
+        if (totalMatches == 3) bounsPoints++;
 
-            if (item.Name == player.drinkItem.Name)
-                matchingCount++;
-  
-        }
-
-
-        foreach (var item in gameItems)
-        {
-            if (item.Name == player.gameItem.Name)
-                matchingCount++;
-
-        }
-
-/*
-        if (matchingCount == 3)
-        {
-            //print("Everything matched you get extra points!!");
-            matchingCount++;
-        }*/
-
-        return matchingCount;
+        return totalMatches + bounsPoints;
     }
       
     
@@ -73,35 +59,21 @@ public class PartyEnjoyment : MonoBehaviour
         foreach (var item in foodItems)
         {
 
-
-            preferenceMatches = CountMatchingFields(item, player);
-            
-        }
-
-        foreach (var item in drinkItems)
-        {
-
-
-            preferenceMatches = CountMatchingFields(item, player);
-            
-        }
-
-
-        foreach (var item in gameItems)
-        {
-
-
-            preferenceMatches = CountMatchingFields(item, player);
-            
-        }
-
-
-    }*/
-
-    public int CalculatePartyEnjoyment()
+    /*public int CalculateExtraPoints()
     {
-        return 0;
-    }
+        
+        int basePoints = CountMatchingFields();
+        int extraPoint = 0;
+        if (basePoints == 3)
+        {
+
+
+            preferenceMatches = CountMatchingFields(item, player);
+            
+        }
+
+        return basePoints + extraPoint;
+    }*/
 
     public int GetPreferenceMatches()
     {

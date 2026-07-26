@@ -5,9 +5,9 @@ using UnityEngine;
 public class PartyGoer : ScriptableObject
 {
 
-    [SerializeField] private Item Corn;
-    [SerializeField] private Item Drinks;
-    [SerializeField] private Item Games;
+   public Item Food;
+   public Item Drinks;
+   public Item Games;
 
     //public Preferences preferences;
 
