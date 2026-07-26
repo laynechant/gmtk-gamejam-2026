@@ -28,41 +28,34 @@ public class PartyEnjoyment : MonoBehaviour
 
     }
 
-    private int CountMatchingFields(Player player)
+    public int CountMatchingFields()
     {
-        int matchingCount = 0;
-        foreach (var item in jonsPreferences)
-        {
-            if (item.Name == player.foodItem.Name)
-                matchingCount++;
+        int totalMatches = 0;
+        int bounsPoints = 0;
+        int jonMatches = 0;
 
+
+        foreach (var person in partyGoers)
+        {
+            int matchesForPerson = 0;
+
+            if (person != null && person.Food.Name == player.foodItem.Name) matchesForPerson++;
+            if (person != null && person.Drinks.Name == player.drinkItem.Name) matchesForPerson++;
+            if (person != null && person.Games.Name == player.gameItem.Name) matchesForPerson++;
+            totalMatches += matchesForPerson;
         }
 
-        foreach (var item in mercedesPreferences)
-        {
+        if (totalMatches == 3) bounsPoints++;
 
-            if (item.Name == player.drinkItem.Name)
-                matchingCount++;
-  
-        }
-
-
-        foreach (var item in charliePreferences)
-        {
-            if (item.Name == player.gameItem.Name)
-                matchingCount++;
-
-        }
-
-        return matchingCount;
+        return totalMatches + bounsPoints;
     }
       
 
 
-    public int CalculateExtraPoints()
+    /*public int CalculateExtraPoints()
     {
         
-        int basePoints = CountMatchingFields(player);
+        int basePoints = CountMatchingFields();
         int extraPoint = 0;
         if (basePoints == 3)
         {
@@ -70,7 +63,7 @@ public class PartyEnjoyment : MonoBehaviour
         }
 
         return basePoints + extraPoint;
-    }
+    }*/
 
     public int GetPreferenceMatches()
     {

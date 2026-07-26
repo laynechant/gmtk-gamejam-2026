@@ -10,11 +10,11 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        int totalPoints = partyEnjoyment.CalculateExtraPoints();
+        int totalPoints = partyEnjoyment.CountMatchingFields();
         print(totalPoints);
         if (totalPoints > 2)
         {
-            print("hisiis");
+            //print("hisiis");
             winCanvas.enabled = true;
         }
         else
