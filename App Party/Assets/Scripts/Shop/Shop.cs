@@ -4,12 +4,17 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     [SerializeField] private Event PizzaBought;  
-    [SerializeField] private Item partyItem;  
+    [SerializeField] private Item shopItem;  
+    [SerializeField] private Player player;  
 
 
     public void ButtonClicked()
     {
-        PizzaBought.Raise(this, partyItem);
-        print("Rasing this event now!!");
+        if (player.money >= shopItem.Price) 
+        {        
+            PizzaBought.Raise(this, shopItem);
+            player.SubtractMoney(shopItem.Price);
+            print("Rasing this event now!!");
+        }
     }
 }

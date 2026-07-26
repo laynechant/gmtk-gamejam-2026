@@ -27,9 +27,9 @@ public class PartyEnjoyment : MonoBehaviour
     {
         int count = CountMatchingFields(player);
 
-       
+     
     }
-    // this has to 
+
     private int CountMatchingFields(Player player)
     {
         int matchingCount = 0;
@@ -56,47 +56,10 @@ public class PartyEnjoyment : MonoBehaviour
 
         }
 
-/*
-        if (matchingCount == 3)
-        {
-            //print("Everything matched you get extra points!!");
-            matchingCount++;
-        }*/
-
         return matchingCount;
     }
       
-    
-   /* private void CollectPartyPreferences()
-    {
 
-        foreach (var item in foodItems)
-        {
-
-
-            preferenceMatches = CountMatchingFields(item, player);
-            
-        }
-
-        foreach (var item in drinkItems)
-        {
-
-
-            preferenceMatches = CountMatchingFields(item, player);
-            
-        }
-
-
-        foreach (var item in gameItems)
-        {
-
-
-            preferenceMatches = CountMatchingFields(item, player);
-            
-        }
-
-
-    }*/
 
     public int CalculatePartyEnjoyment()
     {
