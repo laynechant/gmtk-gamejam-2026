@@ -369,6 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ca1c35fc8dccf4a8eab00d1d59da3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   foodItem: {fileID: 0}
   drinkItem: {fileID: 0}
   gameItem: {fileID: 0}
@@ -377,6 +378,13 @@ MonoBehaviour:
   MoneyUI: {fileID: 0}
   counter: 0
   money: 200
+=======
+  choosenItems:
+    foodType: 0
+    drinks: 0
+    music: 0
+    games: 0
+>>>>>>> shop
 --- !u!4 &1175293419
 Transform:
   m_ObjectHideFlags: 0
@@ -424,11 +432,15 @@ MonoBehaviour:
   partyGoers:
   - {fileID: 11400000, guid: d974c1505397b36438c013b779f684f9, type: 2}
   - {fileID: 11400000, guid: 445f8bd8fd6033b4993d4c8e8e782327, type: 2}
+<<<<<<< HEAD
   foodItems: []
   drinkItems: []
   gameItems: []
   player: {fileID: 1175293418}
   preferenceMatches: 0
+=======
+  player: {fileID: 1175293418}
+>>>>>>> shop
 --- !u!4 &2011402218
 Transform:
   m_ObjectHideFlags: 0
