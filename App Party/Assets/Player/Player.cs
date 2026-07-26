@@ -31,7 +31,6 @@ public class Player : MonoBehaviour
     {
         MoneyUI.text = ("$" + money.ToString());
 
-        print(money);
     }
 
     public void GetChoosenItem(Component sender, object data)
@@ -79,8 +78,7 @@ public class Player : MonoBehaviour
     public void SubtractMoney (int amount)
     {
         money -= amount;
-        print("called " + amount.ToString());
-        //MoneyUI.text = ("$" + money.ToString());
+       
     }
     /*
       potential functions for this class

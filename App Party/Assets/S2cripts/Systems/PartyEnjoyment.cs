@@ -11,9 +11,9 @@ public class PartyEnjoyment : MonoBehaviour
     public List<PartyGoer> partyGoers;
 
     // the list to hold all the party items i made
-    [SerializeField] private List<Item> foodItems;
-    [SerializeField] private List<Item> drinkItems;
-    [SerializeField] private List<Item> gameItems;
+    [SerializeField] private List<Item> jonsPreferences;
+    [SerializeField] private List<Item> mercedesPreferences;
+    [SerializeField] private List<Item> charliePreferences;
 
     // now we get the players pref
     [SerializeField] private Player player;
@@ -25,22 +25,20 @@ public class PartyEnjoyment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int count = CountMatchingFields(player);
 
-     
     }
 
     private int CountMatchingFields(Player player)
     {
         int matchingCount = 0;
-        foreach (var item in foodItems)
+        foreach (var item in jonsPreferences)
         {
             if (item.Name == player.foodItem.Name)
                 matchingCount++;
 
         }
 
-        foreach (var item in drinkItems)
+        foreach (var item in mercedesPreferences)
         {
 
             if (item.Name == player.drinkItem.Name)
@@ -49,7 +47,7 @@ public class PartyEnjoyment : MonoBehaviour
         }
 
 
-        foreach (var item in gameItems)
+        foreach (var item in charliePreferences)
         {
             if (item.Name == player.gameItem.Name)
                 matchingCount++;
@@ -61,9 +59,17 @@ public class PartyEnjoyment : MonoBehaviour
       
 
 
-    public int CalculatePartyEnjoyment()
+    public int CalculateExtraPoints()
     {
-        return 0;
+        
+        int basePoints = CountMatchingFields(player);
+        int extraPoint = 0;
+        if (basePoints == 3)
+        {
+            extraPoint = 1;
+        }
+
+        return basePoints + extraPoint;
     }
 
     public int GetPreferenceMatches()
