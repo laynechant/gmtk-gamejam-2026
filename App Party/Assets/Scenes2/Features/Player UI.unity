@@ -539,6 +539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 596835225}
+  - component: {fileID: 596835226}
   m_Layer: 5
   m_Name: Item List
   m_TagString: Untagged
@@ -565,6 +566,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &596835226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596835224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,34 +1178,9 @@ MonoBehaviour:
   partyGoers:
   - {fileID: 11400000, guid: d974c1505397b36438c013b779f684f9, type: 2}
   - {fileID: 11400000, guid: 445f8bd8fd6033b4993d4c8e8e782327, type: 2}
-  foodItems:
-  - {fileID: 11400000, guid: e48a729218fec4448a5f6f8ed96268ba, type: 2}
-  - {fileID: 11400000, guid: e3b6d6ffda418c043ab64daaef1ca318, type: 2}
-  - {fileID: 11400000, guid: 368a18291ca58774ea90b87640996c86, type: 2}
-  - {fileID: 11400000, guid: 1b24ebc3257f36e4dbe557472ec0c2dc, type: 2}
-  - {fileID: 11400000, guid: a069d61ec3198d645b9d393d4e00afa1, type: 2}
-  - {fileID: 11400000, guid: fd42cfdbd2d75c74ba89dd90d9a3c48b, type: 2}
-  - {fileID: 11400000, guid: 3c164e34db12aa74781b0ba623ba32fa, type: 2}
-  - {fileID: 11400000, guid: fe14312fa6e25bc4f94091a4c01e45cd, type: 2}
-  drinkItems:
-  - {fileID: 11400000, guid: 57f1de7822639e34188e80b2083762de, type: 2}
-  - {fileID: 11400000, guid: a85fde0225b5b064ea86329aa0c15ea9, type: 2}
-  - {fileID: 11400000, guid: 5af84d437e4c23948a54f7119573c66c, type: 2}
-  - {fileID: 11400000, guid: e2b550d77a0e46247ae678c70573a251, type: 2}
-  - {fileID: 11400000, guid: fa2ca969175442842b12e409622efd18, type: 2}
-  - {fileID: 11400000, guid: 9ed8ec153a0da3a4cbe7f0e67c40cd23, type: 2}
-  - {fileID: 11400000, guid: 9a33b819952dec4498ea5b1d7d49e118, type: 2}
-  - {fileID: 11400000, guid: 801c28ad84a2e6d4384e423dbb5ea5b8, type: 2}
-  gameItems:
-  - {fileID: 11400000, guid: 6ff20ad51078fbc48bba651f0676e5b6, type: 2}
-  - {fileID: 11400000, guid: f0da2381e05eea047a3e78a88549ae89, type: 2}
-  - {fileID: 11400000, guid: b51ff01569cca7f44b9d7b94d9f75d6f, type: 2}
-  - {fileID: 11400000, guid: 6c87988ce759d1b4196c7b53b995b11b, type: 2}
-  - {fileID: 11400000, guid: 8bcf33090db3236409622dc671d3d51d, type: 2}
-  - {fileID: 11400000, guid: 7290bb85274a349479789d8ca534d1c2, type: 2}
-  - {fileID: 11400000, guid: ca056c2a6e8d4e24c9c7ecc126dccb9e, type: 2}
-  - {fileID: 11400000, guid: c3b342f5d88147d4ba2aaed1e92ffd89, type: 2}
-  - {fileID: 11400000, guid: 0903c564d0d5d05408507d17e43af231, type: 2}
+  jonsPreferences: []
+  mercedesPreferences: []
+  charliePreferences: []
   player: {fileID: 1175293418}
 --- !u!4 &2011402218
 Transform:
@@ -1289,7 +1291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7092235462158889628, guid: 3fb90bde73813844c9ea91f43b6eafa2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
