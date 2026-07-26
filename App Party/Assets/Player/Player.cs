@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using TMPro;
 
 
 public class Player : MonoBehaviour
@@ -9,18 +10,35 @@ public class Player : MonoBehaviour
     [SerializeField] public Item foodItem;
     [SerializeField] public Item drinkItem;
     [SerializeField] public Item gameItem;
+    [SerializeField] private TextMeshProUGUI MoneyUI;
+
+    private int counter = 0;
+
+    public int money = 100;
+
+    public static Player instance {  get; private set; }
 
 
-   // public ChoosenItems choosenItems;
-
-/*    [Serializable]
-    public struct ChoosenItems
+    private void Awake()
     {
-        public Food.FoodTypes foodType;
-        public Drinks.DrinkTypes drinks;
-        public Music.MusicTypes music;
-        public Games.GameTypes games;
-    }*/
+        instance = this;
+    }
+
+    private void Update()
+    {
+        MoneyUI.text = ("$" + money.ToString());
+    }
+
+    // public ChoosenItems choosenItems;
+
+    /*    [Serializable]
+        public struct ChoosenItems
+        {
+            public Food.FoodTypes foodType;
+            public Drinks.DrinkTypes drinks;
+            public Music.MusicTypes music;
+            public Games.GameTypes games;
+        }*/
 
 
     public void GetChoosenItem(Component sender, object data)
