@@ -9,9 +9,4 @@ public class PartyGoer : ScriptableObject
    public Item Drinks;
    public Item Games;
 
-    /// <summary>
-    /// this is for holding the different types of objects the player can get for the party
-    /// and to compare whether the right object was grabbed for the people 
-    /// </summary>
-
 }
