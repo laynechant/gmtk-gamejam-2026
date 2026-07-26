@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     {
         int totalPoints = partyEnjoyment.CountMatchingFields();
         print(totalPoints);
-        if (totalPoints > 2)
+        if (totalPoints >= 2)
         {
             //print("hisiis");
             winCanvas.enabled = true;

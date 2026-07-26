@@ -9,23 +9,4 @@ public class PartyGoer : ScriptableObject
    public Item Drinks;
    public Item Games;
 
-    //public Preferences preferences;
-
-    // use a list to organize all the SO party items now
-
-    /// <summary>
-    /// this is for holding the different types of objects the player can get for the party
-    /// and to compare whether the right object was grabbed for the people 
-    /// </summary>
-
-    
- /*   public struct Preferences
-    {
-        [Tooltip("What this person prefers to have at a party")]
-        public itfoods;
-        public Drinks.DrinkTypes drinks;
-        public Music.MusicTypes music;
-        public Games.GameTypes games;
-
-    }*/
 }
